@@ -30,7 +30,7 @@ Bis hierher wird nichts angelegt.
 |---|---|---|
 | V1 | `<P>/@/` existiert | Meldung M1, Ende |
 | V2 | Link ist YouTube: `youtube.com/watch?v=…`, `youtu.be/…`, `youtube.com/shorts/…`, `youtube.com/live/…` (auch mit `www.`, `m.` und weiteren Parametern) | Meldung M2, Ende |
-| V3 | `yt-dlp --version` und `python3 --version` laufen | Meldung M3 mit allem, was fehlt, Ende |
+| V3 | `yt-dlp --version` und `python3 --version` laufen | Meldung M3 mit allem, was fehlt, Ende. **Nach M3 endet der Lauf: keine Installation anbieten, nicht nachfragen, nichts ausführen.** |
 | V4 | `Skript lookup "<P>" "<Link>"` gibt nichts aus | **einzige Nachfrage:** „Dieses Video ist schon analysiert: `<pfad>`. Soll ich aus der vorhandenen Video-Notiz eine neue Zusammenfassung machen, oder abbrechen?" — bei „neue Zusammenfassung": `NN` und `<Name>` aus der Ausgabe von `lookup`, Titel und Kanal mit Schritt 2 und `pick` holen (ohne Untertitel zu laden und ohne Schritt 4), dann weiter mit Schritt 5; bei „abbrechen": Ende |
 
 - **M1:** „Die Video-Analyse braucht ein AIOS-Projekt (einen Ordner mit `@/`), weil sie in `@Video/` und `@Summary/` ablegt. Öffne den Chat in einem Projekt oder initialisiere diesen Ordner mit `/aios-init`, dann starte die Video-Analyse erneut."
@@ -127,7 +127,7 @@ Melde beide Pfade als Markdown-Link.
 
 - Keine Rückfrage außer V4.
 - Nur YouTube; nie Video oder Audio laden (immer `--skip-download`).
-- Nichts installieren; fehlende Werkzeuge nur nennen (M3).
+- Nichts installieren und keine Installation anbieten; fehlende Werkzeuge nur nennen (M3). Die Meldung M3 ist das Ende des Laufs.
 - Keine Übersetzung; das Transkript bleibt in der Originalsprache.
 - Nur in `@Video/`, `@Summary/` und `$T` schreiben; Lock-Dateien nie committen.
 - Ein nach einem harten Abbruch liegengebliebenes `@Video/NN.lock` darf der User von Hand löschen.
