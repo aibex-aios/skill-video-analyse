@@ -1,0 +1,11 @@
+name: skill-video-analyse
+version: 0.1.0
+type: skill
+description: Analysiert ein YouTube-Video als Transkript und 5-8-Zusammenfassung mit eingebettetem Video
+requires:
+  aios: ">=0.4,<0.5"
+depends:
+  skill-5-8-zusammenfassung: "~=1.2"
+contents:
+  skills: [video-analyse]
+license: Apache-2.0
