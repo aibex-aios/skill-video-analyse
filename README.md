@@ -1,6 +1,6 @@
 # skill-video-analyse
 
-Paket von AIbex AIOS mit dem Skill `video-analyse`, Version 0.1.0.
+Paket von AIbex AIOS mit dem Skill `video-analyse`, Version 0.2.0.
 
 Aus einem YouTube-Link entstehen im Projekt zwei Dokumente, beide mit eingebettetem Video und derselben Nummer:
 
@@ -11,14 +11,7 @@ Die Analyse läuft ohne Rückfrage, auch mehrfach parallel im selben Projekt.
 
 ## Voraussetzungen
 
-- ein Projekt in einem mit AIbex AIOS v0.4 aktivierten Vault;
-- `yt-dlp` und `python3` im `PATH`, z. B.:
-
-```bash
-pipx install yt-dlp
-```
-
-oder `python3 -m pip install --user yt-dlp` oder `brew install yt-dlp`.
+ein Projekt in einem mit AIbex AIOS v0.5 aktivierten Vault. `yt-dlp` muss nicht installiert werden: Es kommt als Arbeitspferd `worker-yt-dlp` (mit `worker-deno`) mit dem Paket und wird beim Holen eingerichtet; der Skill ruft es über `~/.aios/bin/yt-dlp` auf.
 
 ## Holen
 
@@ -26,7 +19,7 @@ oder `python3 -m pip install --user yt-dlp` oder `brew install yt-dlp`.
 aios --fetch skill-video-analyse
 ```
 
-Das holt auch `skill-5-8-zusammenfassung` und `skill-memo`. Der Skill ist ab dem nächsten Chat verfügbar.
+Das holt auch `skill-5-8-zusammenfassung`, `skill-memo`, `worker-yt-dlp` und `worker-deno`; der Plan zeigt, was dabei auf dem Rechner eingerichtet wird. Der Skill ist ab dem nächsten Chat verfügbar.
 
 ## Aufruf
 
