@@ -1,6 +1,6 @@
 ---
 name: video-analyse
-version: 0.2.0
+version: 0.2.1
 description: >
   Analysiert ein YouTube-Video: holt das Transkript mit yt-dlp (Arbeitspferd worker-yt-dlp), legt es als Video-Notiz in
   @Video/ ab und erstellt mit dem Skill 5-8-zusammenfassung eine Zusammenfassung in @Summary/,
